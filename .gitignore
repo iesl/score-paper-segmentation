@@ -1,0 +1,11 @@
+target
+
+*.swp
+*.swo
+
+.idea
+*.iml
+*.html
+.DS_STORE
+data/
+
