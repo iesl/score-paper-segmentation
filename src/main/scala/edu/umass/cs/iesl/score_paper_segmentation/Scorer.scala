@@ -98,9 +98,9 @@ object Paper {
    * @param rawString
    */
   def apply(rawString: String): Paper = {
-    //val rgx = """^#Header(((?!#Header).)*)#Body(((?!#Body).)*)#References(((?!#References).)*)$""".r
-    //val mtch = rgx.findAllMatchIn(rawString).next()
-    val headerString =  get(rawString, "Header", "Body")
+    val headerString1 =  get(rawString, "Header", "Body")
+    val headerString2 =  get(rawString, "Header", "References")
+    val headerString = Iterable(headerString1,headerString2).minBy(_.getOrElse("").length)
     val bodyString =  get(rawString, "Body", "References")
     val refString =  get(rawString, "References")
     if (headerString.isEmpty)
