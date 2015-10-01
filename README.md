@@ -41,7 +41,7 @@ The following shell script is used to score groups of files. The usage of the sh
 ./bin/score.sh <predicted-directory> <gold-directory> <predicted-file-encoding> <gold-file-encoding> 
 ```
 
-The two directories must the following format. The two directories must files with the same base names (extensions are ignored) for the code to work properly. E.g:
+The two directories must have the following format. The two directories must have files with the same base names (extensions are ignored) for the code to work properly. E.g:
 
 ```
 <Pred>
